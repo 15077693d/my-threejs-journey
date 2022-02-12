@@ -1,0 +1,12 @@
+#content {
+  display: flex;
+}
+
+.section {
+  margin-left: 20px;
+}
+.section label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
