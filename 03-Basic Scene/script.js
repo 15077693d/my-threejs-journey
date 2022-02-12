@@ -9,6 +9,7 @@ let defaultProps = {
   cameraPositionZ: 3,
   cameraWidth: 800,
   cameraHeight: 600,
+  cameraFov: 75,
 };
 function renderBox(props = defaultProps) {
   const {
@@ -21,6 +22,7 @@ function renderBox(props = defaultProps) {
     cameraPositionZ,
     cameraWidth,
     cameraHeight,
+    cameraFov,
   } = props;
   // Scene
   const scene = new THREE.Scene();
@@ -40,11 +42,13 @@ function renderBox(props = defaultProps) {
     width: Number(cameraWidth),
     height: Number(cameraHeight),
   };
-  const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
+  const camera = new THREE.PerspectiveCamera(
+    Number(cameraFov),
+    sizes.width / sizes.height
+  );
   camera.position.x = cameraPositionX;
   camera.position.y = cameraPositionY;
   camera.position.z = cameraPositionZ;
-  scene.add(camera);
 
   // Canvas
   const canvas = document.querySelector("canvas.webgl");
@@ -67,6 +71,7 @@ const ids = [
   "cameraPositionZ",
   "cameraWidth",
   "cameraHeight",
+  "cameraFov",
 ];
 for (let index = 0; index < ids.length; index++) {
   const id = ids[index];
