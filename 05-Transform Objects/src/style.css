@@ -1,0 +1,25 @@
+#header {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  margin: 10px;
+  opacity: 0.5;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  width: 400px;
+  border-radius: 50px;
+  position: absolute;
+}
+
+#header button {
+  margin-top: 5px;
+  font-size: 30px;
+  width: 200px;
+}
